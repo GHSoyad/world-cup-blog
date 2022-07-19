@@ -56,6 +56,7 @@ header .fa-eye {
 
 header .hero-image {
     align-self: flex-end;
+    margin-bottom: -3px;
 }
 
 header img {
@@ -241,4 +242,127 @@ a.blog-link:hover {
 .match-time {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Responsive for tablet */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        width: 90%;
+        padding: 40px 5% 0;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    header p {
+        margin: 20px 0;
+    }
+
+    a.button-link {
+        padding: 10px 15px;
+    }
+
+    /* Main section */
+    main {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        margin: 30px 0;
+        padding: 0;
+        position: relative;
+    }
+
+    aside a.sidebar-link {
+        display: block;
+        margin-bottom: 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer */
+    footer ul {
+        row-gap: 30px;
+    }
+
+    /* Blog page section */
+    #blogs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .blog {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* Responsive for phone */
+@media screen and (max-width: 600px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 10% 0;
+        margin: 10px auto 0;
+    }
+
+    header .hero-image {
+        align-self: center;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside a {
+        width: max-content;
+    }
+
+    aside a:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 60px 0 40px;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    /* Blog section */
+    #blogs {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        border-radius: 20px 20px 0 0;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: 1fr;
+    }
 }
