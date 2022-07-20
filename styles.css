@@ -29,14 +29,18 @@ h2 {
 header {
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 40px 10% 0;
+    padding: 40px 0 0 10%;
     background-color: var(--clr-secondary);
     color: white;
     margin: 40px auto;
     border-radius: 20px;
-    gap: 40px;
+    overflow: hidden;
+}
+
+header .hero-text {
+    width: 60%;
 }
 
 header p {
@@ -60,8 +64,11 @@ header .fa-eye {
 }
 
 header .hero-image {
-    align-self: flex-end;
+    width: 40%;
+    min-height: 400px;
     margin-bottom: -3px;
+    overflow: visible;
+    animation: banner 15s linear 0s infinite;
 }
 
 header img {
@@ -202,14 +209,24 @@ footer ul.footer-icons {
 .blog {
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px 10px 0 0;
+    border-top: 1px solid transparent;
 }
 
 .blog img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 10px 0 0;
 }
 
 .blog-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 15px;
+    min-height: 156px;
 }
 
 a.blog-link {
@@ -220,7 +237,7 @@ a.blog-link {
     border: 1px solid var(--clr-secondary);
     border-radius: 5px;
     padding: 5px 10px;
-    margin-bottom: 15px;
+    margin: 15px 0;
     transition: .3s;
 }
 
@@ -234,7 +251,6 @@ a.blog-link:hover {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: 10px;
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -298,15 +314,15 @@ a.blog-link:hover {
 /* All groups page section */
 #all-groups {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+    gap: 20px;
     flex: 1;
-    gap: 40px;
 }
 
 .group {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     text-align: center;
     border-radius: 10px;
@@ -376,10 +392,6 @@ a.blog-link:hover {
     }
 
     /* Footer */
-    footer {
-        margin: 0;
-    }
-
     footer ul.footer-links {
         row-gap: 30px;
     }
@@ -388,6 +400,10 @@ a.blog-link:hover {
     #blogs {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .blog-details {
+        min-height: 178px;
     }
 
     .blog {
@@ -402,13 +418,27 @@ a.blog-link:hover {
     .tablet-show {
         display: block;
         align-self: center;
-        margin: 30px 0 50px;
+        margin-top: 30px;
     }
 
     /* Upcoming matches page section */
     #upcoming-matches {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    /* All groups page section */
+    #all-groups {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 15px;
+    }
+
+    .group {
+        padding: 15px;
+    }
+
+    .group .country {
+        padding: 15px;
     }
 }
 
@@ -448,7 +478,6 @@ a.blog-link:hover {
     /* Footer */
     footer {
         padding: 60px 0 40px;
-        margin-top: 60px;
     }
 
     .footer-links {
@@ -462,6 +491,10 @@ a.blog-link:hover {
 
     .blog {
         border-radius: 20px 20px 0 0;
+    }
+
+    .blog-details {
+        min-height: max-content;
     }
 
     /* Tablet only button */
