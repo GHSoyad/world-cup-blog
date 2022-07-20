@@ -36,7 +36,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 40px 0 0 10%;
+    padding: 20px 20px 20px 10%;
     background-color: var(--clr-secondary);
     color: white;
     margin: 40px auto;
@@ -88,49 +88,62 @@ header img {
     0% {
         background: url('images/banners/neymar-banner.png');
         background-repeat: no-repeat;
-        transform: scale(.8);
+        background-position: center;
+        transform: scale(.7);
+    }
+
+    31% {
+        background: url('images/banners/neymar-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(1.1);
     }
 
     32% {
-        background: url('images/banners/neymar-banner.png');
-        background-repeat: no-repeat;
-        transform: scale(1.2);
+        background: transparent;
     }
 
     33% {
-        background: transparent;
-    }
-
-    34% {
         background: url('images/banners/messi-banner.png');
         background-repeat: no-repeat;
-        transform: scale(.8);
+        background-position: center;
+        transform: scale(.7);
+    }
+
+    65% {
+        background: url('images/banners/messi-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(1.1);
+    }
+
+    66% {
+        background: transparent;
     }
 
     67% {
-        background: url('images/banners/messi-banner.png');
-        background-repeat: no-repeat;
-        transform: scale(1.2);
-    }
-
-    68% {
-        background: transparent;
-    }
-
-    69% {
         background: url('images/banners/ronaldo-banner.png');
         background-repeat: no-repeat;
-        transform: scale(.8);
+        background-position: center;
+        transform: scale(.7);
+    }
+
+    98% {
+        background: url('images/banners/ronaldo-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(1.1);
     }
 
     99% {
-        background: url('images/banners/ronaldo-banner.png');
-        background-repeat: no-repeat;
-        transform: scale(1.2);
+        background: transparent;
     }
 
     100% {
-        background: transparent;
+        background: url('images/banners/neymar-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(.7);
     }
 }
 
@@ -449,7 +462,7 @@ a.blog-link:hover {
     /* Header */
     header {
         width: 90%;
-        padding: 40px 0 0 5%;
+        padding: 20px 0 20px 5%;
     }
 
     h1 {
@@ -561,7 +574,7 @@ a.blog-link:hover {
     header .hero-image {
         width: 100%;
         align-self: center;
-        margin-top: 40px;
+        margin: 20px 0;
     }
 
     /* Main section */
